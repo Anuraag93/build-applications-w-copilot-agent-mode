@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-p1rv2j3-y#hs$4fkfa#63-j@9cuf%n2n4bgbuy49u)n#flaq@b
 DEBUG = True
 
 # Allow all hosts
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'special-space-telegram-qvxr679w9x39vgg-8000.app.github.dev']
 
 
 # Application definition
