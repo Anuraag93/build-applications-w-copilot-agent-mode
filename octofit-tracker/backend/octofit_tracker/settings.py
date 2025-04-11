@@ -25,8 +25,13 @@ SECRET_KEY = "django-insecure-p1rv2j3-y#hs$4fkfa#63-j@9cuf%n2n4bgbuy49u)n#flaq@b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# Allow all hosts
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'special-space-telegram-qvxr679w9x39vgg-8000.app.github.dev']
+# Add frontend URL to ALLOWED_HOSTS
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'special-space-telegram-qvxr679w9x39vgg-8000.app.github.dev',
+    'special-space-telegram-qvxr679w9x39vgg-3000.app.github.dev',
+]
 
 
 # Application definition
@@ -45,8 +50,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",  # Ensure this is at the top
     "django.middleware.security.SecurityMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
